@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AutoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get("/autos", [AutoController::class, "Listar"]);
+Route::post("/autos", [AutoController::class, "Guardar"]);
+Route::get("/autos/{auto}", [AutoController::class, "ListarUno"]);
+Route::put("/autos/{auto}", [AutoController::class, "Modificar"]);
+Route::delete("/autos", [AutoController::class, "Eliminar"]);
