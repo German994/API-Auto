@@ -10,4 +10,6 @@ class Auto extends Model
 {
     use SoftDeletes;
     use HasFactory;
+    protected $table="Autos";
+
 }

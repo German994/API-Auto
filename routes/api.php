@@ -23,4 +23,4 @@ Route::get("/autos", [AutoController::class, "Listar"]);
 Route::post("/autos", [AutoController::class, "Guardar"]);
 Route::get("/autos/{auto}", [AutoController::class, "ListarUno"]);
 Route::put("/autos/{auto}", [AutoController::class, "Modificar"]);
-Route::delete("/autos", [AutoController::class, "Eliminar"]);
+Route::put("/autos/{auto}", [AutoController::class, "Eliminar"]);
